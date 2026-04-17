@@ -99,7 +99,7 @@ arduino-cli compile --fqbn esp32:esp32:esp32 Apple1_CYD.ino
 
 ### Upload
 ```bash
-arduino-cli upload --fqbn esp32:esp32:esp32 -p COM4 Apple1_CYD.ino
+arduino-cli upload --fqbn esp32:esp32:esp32 -p COMX  Apple1_CYD.ino
 ```
 
 ### Connect
@@ -166,9 +166,11 @@ Paste your program, then press Enter on an empty line.
   --no-terminal  Exit after sending
 ```
 
-### Example: Load a game
+### Example: Load a progam on WozMon
 ```bash
-python send_to_apple1.py -p COM4 lunar_lander.hex
+python send_to_apple1.py -p COMX apple30.txt
+
+Chance COMX with com port used.
 ```
 
 The script sends one character at a time with pacing delays, then drops into an interactive terminal session.
@@ -204,6 +206,8 @@ Apple1_CYD/
 
 ## Credits
 
+- **Reinaldo Torres** - https://github.com/reyco2000/ Emulator for ESP32
 - **Steve Wozniak** — Original Apple 1 hardware, WOZ Monitor, and Integer BASIC
 - **Bodmer** — TFT_eSPI library
 - **Random Nerd Tutorials** — CYD User_Setup.h configuration
+- **GEMINI Pro** Code assitance & Debugging
